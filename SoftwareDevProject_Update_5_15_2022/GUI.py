@@ -313,14 +313,7 @@ def runMaintCheck(i):
             
                 plt.show()
         if cold_check > 0:
-                plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
-                plot1.bar(Temp_Entry_list, Temp_Int_list)
-                plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=10)
-                plt.tight_layout()
-                plt.savefig("Environment.jpg")
-                
-                plt.show()
+    
                 coldWindow(i)
         
  
