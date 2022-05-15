@@ -108,15 +108,17 @@ def runMaintCheck(i):
                     plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                     plot1.bar(Temp_Entry_list, Temp_Int_list)
                     plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
+                    plt.xlabel('Close this window when finished viewing', fontsize=10)
                     plt.tight_layout()
                     plt.savefig("Environment1.jpg")
 
                     plt.show()
-            elif cold_check > 0:
+            if cold_check > 0:
                 coldWindow(i)
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Temp_Entry_list, Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment1.jpg")
 
@@ -136,7 +138,7 @@ def runMaintCheck(i):
                 plot3 = plt.subplot2grid((3, 3), (1, 0), rowspan=2)
                 plot3.plot(Impact_Detected_Entry_list, Impact_Detected_Int_list)
                 plot3.set_title('Impact Graph')
-
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment2.jpg")
 
@@ -173,16 +175,16 @@ def runMaintCheck(i):
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Temp_Entry_list, Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
             
                 plt.show()
-            elif cold_check > 0:
+            if cold_check > 0:
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Invalid_Temp_Entry_list, Invalid_Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
                 
@@ -205,7 +207,7 @@ def runMaintCheck(i):
                 plot3 = plt.subplot2grid((3, 3), (1, 0), rowspan=2)
                 plot3.plot(Impact_Detected_Entry_list, Impact_Detected_Int_list)
                 plot3.set_title('Impact Graph')
-
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment2.jpg")
 
@@ -239,16 +241,16 @@ def runMaintCheck(i):
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Temp_Entry_list, Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
             
                 plt.show()
-        elif cold_check > 0:
+        if cold_check > 0:
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Invalid_Temp_Entry_list, Invalid_Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
                 
@@ -271,7 +273,7 @@ def runMaintCheck(i):
                 plot3 = plt.subplot2grid((3, 3), (1, 0), rowspan=2)
                 plot3.plot(Impact_Detected_Entry_list, Impact_Detected_Int_list)
                 plot3.set_title('Impact Graph')
-
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment2.jpg")
 
@@ -282,14 +284,14 @@ def runMaintCheck(i):
                     print("Moisture Detected")
                     water_check += 1
 
-        for row in table_view_Temperature2:
+        for row in table_view_Temperature1:
                 if row[1] > 80:
                     print ("This battery is too hot and requires maintenance")
                     print(heat_check)
                     heat_check += 1
                 else:
                     print("No maintance")
-        for row in table_view_Temperature2:
+        for row in table_view_Temperature1:
                     if row[1] < 75:
                         print ("This battery is too cold and requires maintenance")
                         print(cold_check)
@@ -305,16 +307,16 @@ def runMaintCheck(i):
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
                 plot1.bar(Temp_Entry_list, Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
             
                 plt.show()
-        elif cold_check > 0:
+        if cold_check > 0:
                 plot1 = plt.subplot2grid((3, 3), (0, 0), colspan=2)
-                plot1.bar(Invalid_Temp_Entry_list, Invalid_Temp_Int_list)
+                plot1.bar(Temp_Entry_list, Temp_Int_list)
                 plot1.set_title('Temperature Graph (Temps(F) over time(hr))')
-                plt.xlabel('Close this window when finished viewing', fontsize=20)
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment.jpg")
                 
@@ -337,7 +339,7 @@ def runMaintCheck(i):
                 plot3 = plt.subplot2grid((3, 3), (1, 0), rowspan=2)
                 plot3.plot(Impact_Detected_Entry_list, Impact_Detected_Int_list)
                 plot3.set_title('Impact Graph')
-
+                plt.xlabel('Close this window when finished viewing', fontsize=10)
                 plt.tight_layout()
                 plt.savefig("Environment2.jpg")
 
